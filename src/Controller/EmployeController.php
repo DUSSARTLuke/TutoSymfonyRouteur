@@ -12,11 +12,23 @@ class EmployeController extends AbstractController
 {
 
   /**
-   * @Route("employe/{id}", name="voir")
+   * @Route("employe/{id}", name="voir", defaults={"id":99}, requirements= {"id":"\d+"})
    */
   public function voir(int $id): Response
   {
     return $this->render('employe/voir.html.twig', [
+        'id' => $id
+    ]);
+  }
+  
+  
+  /**
+   * @Route("employeV2/{id}", name="voirV2")
+   * 
+   */
+  public function voirEmployeV2(int $id): Response
+  {
+    return $this->render('employe/voirEmploye.html.twig', [
         'id' => $id
     ]);
   }
