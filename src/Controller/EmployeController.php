@@ -32,4 +32,15 @@ class EmployeController extends AbstractController
         'id' => $id
     ]);
   }
+  
+  /**
+   * @Route("employe/{nom}", name="voirNom", requirements= {"nom":"^[B][a-zé-î]+"})
+   * 
+   */
+  public function voirNom(string $nom): Response
+  {
+    return $this->render('employe/voirNom.html.twig', [
+        'nom' => $nom
+    ]);
+  }
 }
