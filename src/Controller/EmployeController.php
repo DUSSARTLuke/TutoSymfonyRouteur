@@ -66,7 +66,7 @@ class EmployeController extends AbstractController
   /**
    * @Route("monCV/{_locale}",
    * name="voirCV",
-   * requirements={"_locale": "fr|en"},
+   * requirements={"_locale": "fr|en|es"},
    * defaults={"_locale":"fr"})
    */
   public function voirCV(){
